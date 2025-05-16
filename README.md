@@ -52,4 +52,7 @@ Ikuti langkah-langkah berikut untuk menyiapkan dan menjalankan proyek Pyramid in
     ```bash
     pserve development.ini --reload
 
+## Dokumentasi 
+![ Dokumentasi ](dokumentasi.jpeg)
+
 

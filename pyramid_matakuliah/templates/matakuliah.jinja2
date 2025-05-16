@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manajemen Mata Kuliah</title>
+</head>
+<body>
+    <h1>Daftar Mata Kuliah</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Kode</th>
+                <th>Nama</th>
+                <th>SKS</th>
+                <th>Semester</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for mk in matakuliah %}
+            <tr>
+                <td>{{ mk.kode_mk }}</td>
+                <td>{{ mk.nama_mk }}</td>
+                <td>{{ mk.sks }}</td>
+                <td>{{ mk.semester }}</td>
+                <td>
+                    <form action="/matakuliah/delete/{{ mk.id }}" method="post" style="display:inline;">
+                        <button type="submit">Hapus</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>Tambah Mata Kuliah</h2>
+    <form action="/matakuliah/add" method="post">
+        <input type="text" name="kode_mk" placeholder="Kode MK" required><br>
+        <input type="text" name="nama_mk" placeholder="Nama MK" required><br>
+        <input type="number" name="sks" placeholder="SKS" required><br>
+        <input type="number" name="semester" placeholder="Semester" required><br>
+        <button type="submit">Tambah</button>
+    </form>
+</body>
+</html>
