@@ -1,4 +1,5 @@
 # Manajemen Mata Kuliah
+## Harisya Miranti - 122140049
 
 ## API Endpoints
 
@@ -14,7 +15,7 @@
 
 ---
 
-## Getting Started
+## Langkah Kerja
 
 Ikuti langkah-langkah berikut untuk menyiapkan dan menjalankan proyek Pyramid ini:
 
